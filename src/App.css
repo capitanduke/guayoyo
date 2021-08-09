@@ -2,10 +2,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Cutive+Mono&display=swap');
 
-* {
+html,
+body {
   margin: 0;
   padding: 0;
-  }
+}
+
+/* use viewport-relative units to cover page fully */
+html, body {
+  margin: 0;
+  height: 100%;
+  overflow: hidden
+}
+
+/* include border and padding in element width and height */
+* {
+  box-sizing: border-box;
+}
 
   h1, h2 {
     /*font-family: 'Alfa Slab One', cursive;*/

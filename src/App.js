@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios'
 import './App.css';
-import Header from './components/Header';
+//import Header from './components/Header';
+//import Main from "./components/Main";
+import Menu from "./components/Menu/Menu";
 
 function App() {
   const [error, setError] = useState(null);
@@ -21,12 +23,17 @@ function App() {
 
   }, [])
 
+  
+  
+
 
   return (
-    <div className="App">
-      <Header posts={posts} loading={loading}/>
-    </div>
-  );
+    <Menu />
+  )
+    
+
+    
+  ;
 }
 
 export default App;

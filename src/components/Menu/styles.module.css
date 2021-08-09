@@ -1,0 +1,90 @@
+.container {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    justify-content: center;
+    position: relative;
+    top: 25px;
+}
+
+.border{
+    width: 0px;
+    height: 1px;
+    background-color: red;
+    position: relative;
+    left: -10rem;
+    top: -6rem;
+}
+
+.text{
+    font-size: 12rem;
+    display: flex;
+    justify-content: center;
+}
+
+.firstElement{
+    opacity: 0;
+    font-size: 5rem;
+    position: relative;
+    display: flex;
+    align-content: center;
+}
+
+.secondElement{
+    opacity: 0;
+    font-size: 5rem;
+    position: relative;
+}
+
+@media (max-width: 480px) {
+    .border{
+        top: -1rem;
+    }
+
+    .imageFirstElement{
+        height: 100px;
+    }
+    
+}
+
+.imageFirstElement{
+    background-image: url("https://esguayoyo.com/wp-content/uploads/2021/06/nachos-scaled.jpg");
+    background-color: #cccccc;
+    height: 200px;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    left: -100px;
+}
+
+.imageSecondElement{
+    background-image: url("https://esguayoyo.com/wp-content/uploads/2021/06/victoria-shes-8OpyEpJVgiQ-unsplash.jpg");
+    background-color: #cccccc;
+    height: 200px;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    right: -100px;
+}
+
+.firstBigImage{
+    background-color: #000;
+    height: 100%;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    display: flex;
+    justify-content: flex-start;
+    z-index: 200;
+}
+  
