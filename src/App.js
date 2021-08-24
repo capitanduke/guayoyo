@@ -4,6 +4,7 @@ import './App.css';
 //import Header from './components/Header';
 //import Main from "./components/Main";
 import Menu from "./components/Menu/Menu";
+import DragImages from "./components/PicaPica/DragImages"
 
 function App() {
   const [error, setError] = useState(null);
@@ -28,7 +29,10 @@ function App() {
 
 
   return (
-    <Menu />
+    <>
+      <Menu />
+      {/*<DragImages />*/}
+    </>
   )
     
 

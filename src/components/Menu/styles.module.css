@@ -83,6 +83,7 @@
     background-repeat: no-repeat;
     background-size: cover;
     position: absolute;
+    top: 0;
     display: flex;
     justify-content: flex-start;
     z-index: 200;

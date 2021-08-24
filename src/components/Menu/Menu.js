@@ -2,6 +2,8 @@ import React, { useState } from 'react'
 import { useSpring, animated } from '@react-spring/web'
 import styled from 'styled-components'
 import styles from './styles.module.css'
+//import PicaPica from "../PicaPica/PicaPica"
+import DragImages from "../PicaPica/DragImages"
 
     const Conatiner = styled.div`
         background-color: white;
@@ -48,37 +50,53 @@ import styles from './styles.module.css'
         }
     `;
 
-    const Close = styled.div`
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-left: 5%;
-        margin-top: -20%;
-        color: #fff;
-        font-size: 6rem;
-        cursor: pointer;
+    const Conatiner2 = styled.div`
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 200px 200px 100%;
+    height: 50vh !important;
+    width: 100%;
+    background-color: #000;
+    z-index: 3000;
 
-        @media (max-width: 480px) {
-            font-size: 2rem;
-        }
-    `;
+    @media (max-width: 480px) {
+        grid-template-rows: 50px 200px 100%;
+    }
+`;
 
-    const ContainerTitleFirst = styled.div`
-        display: ${props => props.openFirst ? "flex" : "none"};
-        justify-content: center;
-        align-items: center;
-        align-self: center;
-        position: relative;
-        bottom: 10rem;
-        width: 100%;
-        height: 10rem;
-        color: #fff;
-        font-size: 4rem;
+const Close = styled.div`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-size: 6rem;
+    cursor: pointer;
 
-        @media (max-width: 480px) {
-            
-        }
-    `;
+    @media (max-width: 480px) {
+        font-size: 2rem;
+    }
+`;
+
+const TitleContainer = styled.div`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-size: 6rem;
+    cursor: pointer;
+
+    @media (max-width: 480px) {
+        font-size: 2rem;
+    }
+`;
+
+const Body = styled.div`
+    background-color: #000;
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+`
+    
 
 
 const Menu = () => {
@@ -126,15 +144,23 @@ const Menu = () => {
         config: { duration: 400 },
     })
 
-    const { closeX } = useSpring({
+    let hoch = 1200
+    if(window.innerWidth < 480){
+        hoch = 750
+      }
+
+      const { closeX } = useSpring({
         from: { closeX: 0 },
         closeX: openFirst ? 1 : 0,
-        config: { duration: 400 },
+        config: { duration: 1250 },
     })
 
-    const handleCose = () => {
-        setOpenFirst(!openFirst)
-    }
+    const { title } = useSpring({
+        from: { title: 0 },
+        title: openFirst ? 1 : 0,
+        config: { duration: 1250 },
+    })
+
 
     return (
         <Conatiner>
@@ -205,29 +231,38 @@ const Menu = () => {
                     opacity: bigImageFirst.to({ range: [0, 1], output: [0, 1] }),
                     height: bigImageFirst.to({
                         range: [0, 1],
-                        output: [0, 2000],
+                        output: [0, hoch],
+                    }),
+                    top: bigImageFirst.to({
+                        range: [0, 1],
+                        output: [700, 0],
                     }),
                 }}>
-                    <Close onClick={() => handleCose()}>
-                        <animated.div
-                            style={{
-                                opacity: closeX.to({ range: [0, 1], output: [0, 1] }),
-                                rotate: closeX.to({
-                                    range: [0, 1],
-                                    output: [0, 90],
-                                }),
-                            }}>
-                                X
-                        </animated.div>        
-                    </Close>
-                    <ContainerTitleFirst openFirst={openFirst}>
-                        <animated.div
+                    <Conatiner2>
+                        <Close onClick={() => setOpenFirst(!openFirst)}>
+                            <animated.div
                                 style={{
-                                    opacity: closeX.to({ range: [0, 0.25, 0.35, 0.45, 0.55, 0.65, 0.75, 1], output: [0, 0.25, 0.35, 0.45, 0.55, 0.65, 0.75, 1] }),
+                                    opacity: closeX.to({ range: [0, 1], output: [0, 1] }),
+                                    rotate: closeX.to({
+                                        range: [0, 1],
+                                        output: [0, 90],
+                                    }),
+                                }}>
+                                    X
+                            </animated.div>        
+                        </Close>
+                        <TitleContainer>
+                            <animated.div
+                                style={{
+                                    opacity: title.to({ range: [0, 1], output: [0, 1] }),
                                 }}>
                                 <h1>PICA PICA</h1>
-                        </animated.div>
-                    </ContainerTitleFirst>
+                            </animated.div>
+                        </TitleContainer>
+                        <Body>
+                            <DragImages />
+                        </Body>
+                    </Conatiner2>
             </animated.div>
         </Conatiner>
     )

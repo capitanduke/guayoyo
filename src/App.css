@@ -44,3 +44,13 @@ html, body {
     justify-content: center;
     align-items: center;
   }  
+
+  @media only screen and (max-width: 480px) {
+    h1, h2 {
+      font-size: 2rem;
+    }
+
+    p{
+      font-size: 0.75rem;
+    }
+  }
