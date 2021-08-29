@@ -26,7 +26,7 @@ const DragImages = () => {
       return (
         <>
         {images.map((img, i) => (
-            <DragContainer key={i} count={i} xs={img.x} ys={img.y}>
+            <DragContainer key={i} xs={img.x} ys={img.y}>
                     <Imagen image={img.image} />   
             </DragContainer>
         ))}
