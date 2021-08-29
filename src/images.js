@@ -8,8 +8,8 @@ const images = [
     {
         id: 1,
         image: "https://esguayoyo.com/wp-content/uploads/2021/06/music-scaled.jpg",
-        x: 250,
-        y: 100,
+        x: 50,
+        y: 50,
     },
     {
         id: 2,
@@ -20,8 +20,8 @@ const images = [
     {
         id: 3,
         image: "https://esguayoyo.com/wp-content/uploads/2021/06/pizza-scaled.jpg",
-        x: 250,
-        y: 100,
+        x: 350,
+        y: 80,
     },
     {
         id: 4,

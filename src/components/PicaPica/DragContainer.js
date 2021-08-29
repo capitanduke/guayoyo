@@ -13,10 +13,7 @@ import styles from './styles.module.css'
     const calcX = (y, ly) => -(y - ly - window.innerHeight / 2) / 20
     const calcY = (x, lx) => (x - lx - window.innerWidth / 2) / 20
 
-const DragContainer = ({children, xs, ys}) => {
-
-    console.log(xs)
-    console.log(ys)
+const DragContainer = ({children, xs, ys, count}) => {
 
     useEffect(() => {
         const preventDefault = (e) => e.preventDefault()
@@ -29,16 +26,12 @@ const DragContainer = ({children, xs, ys}) => {
         }
       }, [])
 
-      if(window.innerWidth < 480){
-        xs = -5
-        ys = 50
-      }
     
       const domTarget = useRef(null)
       const [{ x, y, }, api] = useSpring(
         () => ({
-          x: 0,
-          y: 0,
+          x: window.innerWidth < 480 ?  Math.floor(Math.random() * 200) : xs,
+          y: window.innerWidth < 480 ? Math.floor(Math.random() * 250) + 30 : ys,
           config: { mass: 5, tension: 350, friction: 40 },
         })
       )
@@ -50,8 +43,6 @@ const DragContainer = ({children, xs, ys}) => {
         },
         { domTarget, eventOptions: { passive: false }, },
       )
-
-      console.log("x get()", x.get())
 
       return (
         <Conatiner>

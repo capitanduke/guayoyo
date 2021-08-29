@@ -152,13 +152,13 @@ const Menu = () => {
       const { closeX } = useSpring({
         from: { closeX: 0 },
         closeX: openFirst ? 1 : 0,
-        config: { duration: 1250 },
+        config: { duration: 550 },
     })
 
     const { title } = useSpring({
         from: { title: 0 },
         title: openFirst ? 1 : 0,
-        config: { duration: 1250 },
+        config: { duration: 550 },
     })
 
 
