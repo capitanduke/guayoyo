@@ -1,5 +1,5 @@
 import React, { useRef, useEffect } from 'react'
-import { useSpring, animated, to } from '@react-spring/web'
+import { useSpring, animated } from '@react-spring/web'
 import { useGesture } from 'react-use-gesture'
 import styled from 'styled-components'
 import styles from './styles.module.css'
@@ -36,8 +36,6 @@ const DragContainer = ({children, xs, ys}) => {
         })
       )
 
-      console.log(xs)
-
       const initialOffset = useRef({ x: xs || 0, y: ys || 0})  
 
       useGesture(
@@ -51,7 +49,6 @@ const DragContainer = ({children, xs, ys}) => {
                     x: !last ? dx + ix : Math.max(-200, Math.min(window.innerWidth, dx + ix)),
                     y: !last ? dy + iy : Math.max(-200, Math.min(window.innerHeight, dy + iy))
                 }
-                console.log(Math.max(100, Math.min(window.innerWidth, dx + ix)))
                 api(newValue)
           }  
         },

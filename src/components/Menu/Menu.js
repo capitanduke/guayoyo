@@ -2,8 +2,8 @@ import React, { useState } from 'react'
 import { useSpring, animated } from '@react-spring/web'
 import styled from 'styled-components'
 import styles from './styles.module.css'
-//import PicaPica from "../PicaPica/PicaPica"
 import DragImages from "../PicaPica/DragImages"
+import Drinks from "../Drinks/Drinks"
 
     const Conatiner = styled.div`
         background-color: white;
@@ -101,6 +101,7 @@ const Body = styled.div`
 
 const Menu = () => {
     const [openFirst, setOpenFirst] = useState(false)
+    const [openSecond, setOpenSecond] = useState(false)
     const [state, toggle] = useState(false)
     const { x } = useSpring({
         from: { x: 0 },
@@ -149,7 +150,7 @@ const Menu = () => {
         hoch = 750
       }
 
-      const { closeX } = useSpring({
+    const { closeX } = useSpring({
         from: { closeX: 0 },
         closeX: openFirst ? 1 : 0,
         config: { duration: 550 },
@@ -158,6 +159,24 @@ const Menu = () => {
     const { title } = useSpring({
         from: { title: 0 },
         title: openFirst ? 1 : 0,
+        config: { duration: 550 },
+    })
+
+    const { bigImageFirst2 } = useSpring({
+        from: { bigImageFirst2: 0 },
+        bigImageFirst2: openSecond ? 1 : 0,
+        config: { duration: 400 },
+    })
+
+    const { closeDrinks } = useSpring({
+        from: { closeDrinks: 0 },
+        closeDrinks: openSecond ? 1 : 0,
+        config: { duration: 550 },
+    })
+
+    const { titleDrinks } = useSpring({
+        from: { titleDrinks: 0 },
+        titleDrinks: openSecond ? 1 : 0,
         config: { duration: 550 },
     })
 
@@ -202,7 +221,7 @@ const Menu = () => {
                     </animated.div>
                 </animated.div>
             </FirstElement>
-            <SecondElement onClick={() => toggle(!state)}>
+            <SecondElement onClick={() => setOpenSecond(!openSecond)}>
                 <animated.div
                     className={styles.imageSecondElement}
                     style={{
@@ -261,6 +280,45 @@ const Menu = () => {
                         </TitleContainer>
                         <Body>
                             <DragImages />
+                        </Body>
+                    </Conatiner2>
+            </animated.div>
+            <animated.div
+                className={styles.firstBigImage}
+                style={{
+                    opacity: bigImageFirst2.to({ range: [0, 1], output: [0, 1] }),
+                    height: bigImageFirst2.to({
+                        range: [0, 1],
+                        output: [0, hoch],
+                    }),
+                    top: bigImageFirst2.to({
+                        range: [0, 1],
+                        output: [700, 0],
+                    }),
+                }}>
+                    <Conatiner2>
+                        <Close onClick={() => setOpenSecond(!openSecond)}>
+                        <animated.div
+                                style={{
+                                    opacity: closeDrinks.to({ range: [0, 1], output: [0, 1] }),
+                                    rotate: closeDrinks.to({
+                                        range: [0, 1],
+                                        output: [0, 90],
+                                    }),
+                                }}>
+                                    X
+                            </animated.div>        
+                        </Close>
+                        <TitleContainer>
+                            <animated.div
+                                style={{
+                                    opacity: titleDrinks.to({ range: [0, 1], output: [0, 1] }),
+                                }}>
+                                <h1>DRINKS</h1>
+                            </animated.div>
+                        </TitleContainer>
+                        <Body>
+                            <Drinks />
                         </Body>
                     </Conatiner2>
             </animated.div>

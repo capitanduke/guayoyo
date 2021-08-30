@@ -18,8 +18,6 @@ import DragContainer from "./DragContainer"
         }
 
     `
-
-
 const DragImages = () => {
 
     
