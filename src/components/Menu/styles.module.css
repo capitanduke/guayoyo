@@ -28,27 +28,44 @@
     position: relative;
     display: flex;
     align-content: center;
+    color: #fff;
 }
 
 .secondElement{
     opacity: 0;
     font-size: 5rem;
     position: relative;
+    display: flex;
+    align-content: center;
+    color: #fff;
 }
 
-@media (max-width: 480px) {
-    .border{
-        top: -1rem;
-    }
-
-    .imageFirstElement{
-        height: 100px;
-    }
-    
+.thirdElement{
+    opacity: 0;
+    font-size: 5rem;
+    position: relative;
+    display: flex;
+    align-content: center;
+    color: #fff;
 }
 
 .imageFirstElement{
-    background-image: url("https://esguayoyo.com/wp-content/uploads/2021/06/nachos-scaled.jpg");
+    background-image: url("https://esguayoyo.com/wp-content/uploads/2021/06/nachos-scaled-e1630854969195.jpg");
+    background-color: #cccccc;
+    height: 200px;
+    width: 100%;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    left: -100px;
+}
+
+
+.imageSecondElement{
+    background-image: url("https://esguayoyo.com/wp-content/uploads/2021/09/amanda-lim-bO5a6gAmGOs-unsplash.jpg");
     background-color: #cccccc;
     height: 200px;
     width: 100%;
@@ -58,10 +75,24 @@
     position: relative;
     display: flex;
     justify-content: center;
-    left: -100px;
+    right: -100px;
 }
 
-.imageSecondElement{
+.imageThirdElement{
+    background-image: url("https://esguayoyo.com/wp-content/uploads/2021/09/vladimir-gladkov-mlWz4-XY_JQ-unsplash.jpg");
+    background-color: #cccccc;
+    height: 200px;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    right: -100px;
+}
+
+.imageForthElement{
     background-image: url("https://esguayoyo.com/wp-content/uploads/2021/06/victoria-shes-8OpyEpJVgiQ-unsplash.jpg");
     background-color: #cccccc;
     height: 200px;
@@ -87,5 +118,70 @@
     display: flex;
     justify-content: flex-start;
     z-index: 200;
+}
+
+.secondBigImage{
+    background-color: #5bccf6;
+    height: 100%;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    display: flex;
+    justify-content: flex-start;
+    z-index: 200;
+}
+
+.thirdBigImage{
+    background-color: #5CDB95;
+    height: 100%;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    display: flex;
+    justify-content: flex-start;
+    z-index: 200;
+}
+
+.forthBigImage{
+    background-color: #F13C20;
+    height: 100%;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    display: flex;
+    justify-content: flex-start;
+    z-index: 200;
+}
+
+@media (max-width: 480px) {
+    .border{
+        top: -1rem;
+    }
+
+    .imageFirstElement{
+        height: 150px;
+    }
+
+    .imageSecondElement{
+        height: 150px;
+    }
+
+    .imageThirdElement{
+        height: 150px;
+    }
+
+    .imageForthElement{
+        height: 150px;
+    }
+    
 }
   

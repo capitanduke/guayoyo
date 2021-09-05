@@ -1,6 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Cutive+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Monoton&family=Staatliches&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Shade&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Cutive+Mono&display=swap');
+
 
 html,
 body {
@@ -18,17 +21,23 @@ html, body {
 /* include border and padding in element width and height */
 * {
   box-sizing: border-box;
+  padding: 0;
+    margin: 0;
 }
 
   h1, h2 {
-    /*font-family: 'Alfa Slab One', cursive;*/
-    font-family: 'Shrikhand', cursive;
+    font-family: 'Bungee Shade', cursive;
+    font-size: 5rem;
+  }
+
+  h4{
+    font-family: 'Bebas Neue', cursive;
     font-size: 5rem;
   }
 
   p {
     font-family: 'Cutive Mono', monospace;
-    font-size: 2rem;
+    font-size: 5rem;
   }
   
   .bg {
