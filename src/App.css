@@ -11,6 +11,10 @@ body {
   padding: 0;
 }
 
+::-webkit-scrollbar {
+  display: none;
+}
+
 /* use viewport-relative units to cover page fully */
 html, body {
   margin: 0;

@@ -4,6 +4,8 @@ import styled from 'styled-components'
 import styles from './styles.module.css'
 import DragImages from "../PicaPica/DragImages"
 import Drinks from "../Drinks/Drinks"
+import AboutUs from "../AboutUs/AboutUs"
+import Principales from "../Principales/Principales"
 
     const Conatiner = styled.div`
         background-color: #fcde67;
@@ -88,17 +90,14 @@ import Drinks from "../Drinks/Drinks"
     `;
 
     const Conatiner3 = styled.div`
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: 200px 200px 100%;
-        height: 100% !important;
-        width: 100%;
-        background-color: #5bccf6;
-        z-index: 3000;
-
-        @media (max-width: 480px) {
-            grid-template-rows: 50px 200px 100%;
-        }
+        background-color: #ffffff;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
     `;
 
     const Conatiner4 = styled.div`
@@ -241,10 +240,11 @@ import Drinks from "../Drinks/Drinks"
     `
     
     const BodyPrincipales = styled.div`
-        background-color: #5bccf6;
+        background-color: transparent;
         height: 100%;
         display: flex;
         justify-content: flex-start;
+        
     `
 
     const BodySalads = styled.div`
@@ -578,16 +578,8 @@ const Menu = () => {
                                     X
                             </animated.div>        
                         </ClosePrin>
-                        <TitleContainerPrin>
-                            <animated.div
-                                style={{
-                                    opacity: titlePrincipales.to({ range: [0, 1], output: [0, 1] }),
-                                }}>
-                                <h1>Principales</h1>
-                            </animated.div>
-                        </TitleContainerPrin>
                         <BodyPrincipales>
-                            <h1>Principales</h1>
+                            <Principales />
                         </BodyPrincipales>
                     </Conatiner3>
             </animated.div>
@@ -626,7 +618,7 @@ const Menu = () => {
                             </animated.div>
                         </TitleContainer>
                         <BodySalads>
-                            <h1>Hello Salads</h1>
+                            <AboutUs />
                         </BodySalads>
                     </Conatiner4>
             </animated.div>
