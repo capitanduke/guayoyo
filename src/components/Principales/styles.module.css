@@ -23,16 +23,33 @@
     width: 100%;
     height: 750px;
     margin-left: 15%;
-    background-image: url("https://esguayoyo.com/wp-content/uploads/2021/06/nachos-scaled-e1630854969195.jpg");
+    background-image: url("https://esguayoyo.com/wp-content/uploads/2021/10/pasta.jpg");
     background-repeat: no-repeat;
     background-size: cover;
+  }
+
+  .risotto {
+    width: 100%;
+    height: 750px;
+    margin-right: 15%;
+    background-image: url("https://esguayoyo.com/wp-content/uploads/2021/10/risotto.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .risottoText {
+    width: 100%;
+    height: 750px;
+    border: 1px solid #000;
+    margin-left: 15%;
   }
   
   .blue {
     width: 100%;
     height: 750px;
     margin-left: 10rem;
-    background-image: url("https://esguayoyo.com/wp-content/uploads/2021/06/pizza2.jpg");
+    background-image: url("https://esguayoyo.com/wp-content/uploads/2021/10/lasagna.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -41,29 +58,70 @@
   .purple {
     width: 100%;
     height: 750px;
-    background-image: url("https://esguayoyo.com/wp-content/uploads/2021/06/empanadas.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+    border: 1px solid #000;
   }
-  
-  .white {
+
+  .roastbeefText {
+    width: 100%;
+    height: 750px;
+    border: 1px solid #000;
+    margin-right: 15%;
+  }
+
+  .cerdo {
     width: 100%;
     height: 750px;
     background-image: url("https://esguayoyo.com/wp-content/uploads/2021/09/amanda-lim-bO5a6gAmGOs-unsplash.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    margin-left: 15%;
+  }
+
+  .roastbeef {
+    width: 100%;
+    height: 750px;
+    background-image: url("https://esguayoyo.com/wp-content/uploads/2021/10/roasbeef.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    margin-left: 15%;
+  }
+
+  .cerdoText {
+    width: 100%;
+    height: 750px;
+    border: 1px solid #000;
+    margin-right: 15%;
+    z-index: 3000;
+  }
+
+  .asado {
+    width: 100%;
+    height: 750px;
+    margin-right: 15%;
+    background-image: url("https://esguayoyo.com/wp-content/uploads/2021/10/asadonegro2.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .asadoText {
+    width: 100%;
+    height: 750px;
+    border: 1px solid #000;
+    margin-left: 15%;
   }
 
   .black {
     width: 100%;
     height: 750px;
-    margin-left: 10rem;
-    background-image: url("https://esguayoyo.com/wp-content/uploads/2021/09/vladimir-gladkov-mlWz4-XY_JQ-unsplash.jpg");
+    margin-left: 20rem;
+    border: 1px solid #000;
+    /*background-image: url("https://esguayoyo.com/wp-content/uploads/2021/09/vladimir-gladkov-mlWz4-XY_JQ-unsplash.jpg");
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center;
+    background-position: center;*/
   }
   
   @media (max-width: 750px) {
@@ -76,11 +134,27 @@
     }
   
     .sticky {
+      width: 100%;
       margin-left: 1.5rem;
     }
   
     .white {
+      width: 100%;
       margin-left: 1.5rem;
+    }
+
+    .purple {
+      width: 100%;
+      margin-left: 1.5rem;
+    }
+
+    .blue{
+      width: 100%;
+      margin-left: 2rem;
+    }
+
+    .black{
+      width: 100%;
     }
   }
   

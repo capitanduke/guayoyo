@@ -18,7 +18,6 @@ body {
 /* use viewport-relative units to cover page fully */
 html, body {
   margin: 0;
-  height: 100%;
   overflow: hidden
 }
 

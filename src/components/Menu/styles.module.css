@@ -120,8 +120,8 @@
     z-index: 200;
 }
 
-/*.secondBigImage{
-    background-color: #5bccf6;
+.secondBigImage{
+    background-color: transparent;
     height: 100%;
     width: 100%;
     background-position: center;
@@ -132,7 +132,7 @@
     display: flex;
     justify-content: flex-start;
     z-index: 200;
-}*/
+}
 
 .thirdBigImage{
     background-color: #5CDB95;

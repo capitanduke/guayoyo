@@ -12,6 +12,7 @@ import Principales from "../Principales/Principales"
         display: flex;
         justify-content: center;
         flex-direction: column;
+        position: relative;
     `;
 
     const MenuConatiner = styled.div`
